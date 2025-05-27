@@ -107,10 +107,11 @@ app.use(compression());
 
 bootstrap(app, express);
 
-const server = app.listen(4200, () => {
-  console.log('Server is running...');
-});
+const port = process.env.PORT || 4200;
 
+const server = app.listen(port, () => {
+  console.log(`Server is running on port ${port}...`);
+});
 process.on('unhandledRejection', (err) => {
   // any promise error
   server.close(() => {
