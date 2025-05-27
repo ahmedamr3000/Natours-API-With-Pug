@@ -5,9 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "debug": "ndb app.js",
-    "watch:js": "parcel watch ./public/js/index.js --no-source-maps --dist-dir public/js",
-    "build:js": "parcel build ./public/js/index.js --no-source-maps --dist-dir public/js",
+    "build:js": "esbuild ./public/js/index.js --bundle --outfile=./public/js/bundle.js --minify --sourcemap",
     "start": "node app.js"
   },
   "keywords": [],
@@ -52,5 +50,8 @@
     "url": "https://github.com/ahmedamr3000/Natours-api/issues"
   },
   "homepage": "https://github.com/ahmedamr3000/Natours-api#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "esbuild": "^0.25.5"
+  }
 }
