@@ -1,0 +1,20 @@
+header.header 
+    nav.nav.nav--tours
+        a(href="/api/template").nav__el All tours
+        form.nav__search
+        button.nav__search-btn
+        input(type="text", placeholder='Search tours').nav__search-input
+
+    div.header__logo
+        img(src="/img/logo-white.png", alt="Natours logo")
+
+    nav.nav.nav--user
+        if  user 
+ 
+            a(href="").nav__el.nav__el--logout log out
+            a.nav__el 
+                img(src=`/img/users/${user.photo ? user.photo : 'default.jpg'}` alt='User photo').nav__user-img.profileimg
+                span= user.name.split(' ')[1] 
+        else 
+            <a class="nav__el nav__el--cta" href="/api/template/login">Log in</a>
+            button.nav__el.nav__el--cta Sign up

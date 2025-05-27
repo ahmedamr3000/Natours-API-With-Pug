@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+    head 
+        block head
+            link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+            meta(charset="UTF-8")
+            meta(name="viewport", content="width=device-width, initial-scale=1.0")
+            link(rel="stylesheet", href="/css/style.css")
+            title Natours | #{title}
+            script(src='https://js.stripe.com/v3/') 
+
+
+    body 
+        include _header
+        block content    
+
+        include _footer
+        script(src="/js/bundle.js") 
+        //- script(src="/js/login.js") 
+        //- script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.8.4/axios.min.js") 
+
+
