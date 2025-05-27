@@ -33,6 +33,25 @@ const app = express();
 app.set('trust proxy', 1);
 app.use(express.static(path.join(__dirname, 'public')));
 
+console.log('--- Express Static Configuration Checks ---');
+console.log('Current Working Directory (process.cwd()):', process.cwd());
+console.log('__dirname (app.js):', __dirname);
+console.log('Static files being served from:', path.join(__dirname, 'public'));
+console.log(
+  'Does public folder exist at path?',
+  fs.existsSync(path.join(__dirname, 'public'))
+);
+console.log(
+  'Does js folder exist inside public?',
+  fs.existsSync(path.join(__dirname, 'public', 'js'))
+);
+console.log(
+  'Does bundle.js exist in public/js?',
+  fs.existsSync(path.join(__dirname, 'public', 'js', 'bundle.js'))
+);
+console.log('--- End of Express Static Checks ---');
+// ***************************************************************
+
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
