@@ -32,7 +32,7 @@ mongoose
 const app = express();
 
 app.set('view engine', 'pug');
-app.set('views', path.join(__dirname, 'Pug Template'));
+app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 

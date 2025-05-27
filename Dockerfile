@@ -1,0 +1,27 @@
+# استخدم صورة Node.js رسمية (ممكن تغير الـ version لو عايز)
+FROM node:18-alpine
+
+# تثبيت Python و make (اللي node-gyp بيحتاجهم للـ build)
+RUN apk add --no-cache python3 make g++
+
+# تعيين مجلد العمل داخل الكونتينر
+WORKDIR /app
+
+# انسخ ملفات الـ package* عشان نعمل npm install (وده بيسرع الـ build cache)
+COPY package.json package-lock.json ./
+
+# تثبيت الـ dependencies (وده اللي كان بيفشل)
+RUN npm ci --omit=dev --production
+
+# انسخ باقي ملفات المشروع
+COPY . .
+
+# Build الـ frontend باستخدام Parcel (لو لسه عايز تبنيها على Railway)
+# لو هترفع bundle.js جاهز، ممكن تشيل السطر ده وتتأكد ان start script هو node app.js بس
+RUN npm run build:js
+
+# تحديد البورت اللي السيرفر هيشتغل عليه
+EXPOSE 4200
+
+# الأمر اللي هيشغل السيرفر
+CMD ["npm", "start"]
