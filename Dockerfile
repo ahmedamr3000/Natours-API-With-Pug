@@ -18,7 +18,6 @@ COPY . .
 
 # Build الـ frontend باستخدام Parcel (لو لسه عايز تبنيها على Railway)
 # لو هترفع bundle.js جاهز، ممكن تشيل السطر ده وتتأكد ان start script هو node app.js بس
-RUN npm run build:js
 
 # تحديد البورت اللي السيرفر هيشتغل عليه
 EXPOSE 4200
