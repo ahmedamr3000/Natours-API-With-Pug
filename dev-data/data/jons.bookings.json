@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "6805a1c2bb98d2ea64b80781"
+  },
+  "tour": {
+    "$oid": "67e7eeaa5a600034237eb2ca"
+  },
+  "user": {
+    "$oid": "67fd73f0fbdceeae2e70015f"
+  },
+  "price": 1497,
+  "paid": true,
+  "createdAt": {
+    "$date": "2025-04-21T01:38:43.497Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-21T01:38:43.497Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6805a37170721a6a2cc61f12"
+  },
+  "tour": {
+    "$oid": "67e7eeaa5a600034237eb2ca"
+  },
+  "user": {
+    "$oid": "67fd73f0fbdceeae2e70015f"
+  },
+  "price": 1497,
+  "paid": true,
+  "createdAt": {
+    "$date": "2025-04-21T01:46:01.020Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-21T01:46:01.020Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6805a7473e0393a98aa8f5f5"
+  },
+  "tour": {
+    "$oid": "67e7ee675a600034237eb2bc"
+  },
+  "user": {
+    "$oid": "67fd73f0fbdceeae2e70015f"
+  },
+  "price": 497,
+  "paid": true,
+  "createdAt": {
+    "$date": "2025-04-21T02:00:19.077Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-21T02:00:19.077Z"
+  },
+  "__v": 0
+}]
