@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "debug": "ndb app.js",
-    "watch:js": "parcel watch /app/public/js/index.js --no-source-maps --dist-dir public/js",
-    "build:js": "parcel build /app/public/js/index.js --no-source-maps --dist-dir public/js",
-    "start": "npm run build:js && node app.js"
+    "watch:js": "parcel watch ./public/js/index.js --no-source-maps --dist-dir public/js",
+    "build:js": "parcel build ./public/js/index.js --no-source-maps --dist-dir public/js",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
