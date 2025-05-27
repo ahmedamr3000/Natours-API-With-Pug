@@ -9,6 +9,9 @@ import urouter from './modules/Users/users.routes.js';
 
 export const bootstrap = (app, express) => {
   app.use(express.json());
+  app.get('/', (req, res) => {
+    res.redirect('/api/template');
+  });
 
   app.use('/api/allTours', router);
   app.use('/api/allusers', urouter);
