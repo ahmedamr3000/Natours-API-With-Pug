@@ -1,8 +1,8 @@
 # استخدم صورة Node.js رسمية (ممكن تغير الـ version لو عايز)
-FROM node:18-alpine
+FROM node:18-bullseye-slim
 
 # تثبيت Python و make (اللي node-gyp بيحتاجهم للـ build)
-RUN apk add --no-cache python3 make g++
+RUN apt-get update && apt-get install -y python3 make g++ && rm -rf /var/lib/apt/lists/*
 
 # تعيين مجلد العمل داخل الكونتينر
 WORKDIR /app
