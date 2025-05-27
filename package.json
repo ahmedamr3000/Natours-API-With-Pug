@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "debug": "ndb app.js",
-    "watch:js": "parcel watch ./public/js/index.js --no-source-maps --out-dir ./public/js --out-file bundle.js",
-    "build:js": "parcel build ./public/js/index.js --no-source-maps --out-dir ./public/js --out-file bundle.js",
+    "watch:js": "parcel watch ./public/js/index.js --no-source-maps --dist-dir public/js",
+    "build:js": "parcel build ./public/js/index.js --no-source-maps --dist-dir public/js",
     "start": "npm run build:js && node app.js"
   },
   "keywords": [],
@@ -38,7 +38,7 @@
     "multer-storage-cloudinary": "^4.0.0",
     "nodemailer": "^6.10.0",
     "nodemon": "^3.1.9",
-    "parcel-bundler": "^1.12.5",
+    "parcel": "^2.12.0",
     "parser": "^0.1.4",
     "pug": "^3.0.3",
     "slugify": "^1.6.6",
